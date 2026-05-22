@@ -180,7 +180,7 @@
 
                 <div class="col-md-6">
 
-                    <img src="images/medical.png" alt="medical">
+                    <img src="medical.png" alt="medical">
 
                 </div>
 
