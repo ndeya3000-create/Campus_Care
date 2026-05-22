@@ -1,0 +1,36 @@
+body{
+font-family: Arial;
+background:#f2f2f2;
+padding:30px;
+}
+
+h1{
+text-align:center;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+}
+
+th{
+background:#3498db;
+color:white;
+padding:10px;
+}
+
+td{
+padding:10px;
+border-bottom:1px solid #ddd;
+}
+
+tr:hover{
+background:#f1f1f1;
+}
+
+#search{
+padding:10px;
+width:100%;
+margin-bottom:10px;
+}
