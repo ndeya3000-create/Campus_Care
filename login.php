@@ -1,3 +1,19 @@
+<?php
+// ── Messages venant de register.php ──────────────────────────
+$success_msg    = '';
+$register_error = '';
+
+if (isset($_GET['success']) && $_GET['success'] == 1) {
+    $username_created = htmlspecialchars($_GET['username'] ?? '');
+    $success_msg = "Compte créé avec succès ! Votre identifiant : <strong>$username_created</strong>";
+}
+
+if (isset($_GET['register_error'])) {
+    $register_error = htmlspecialchars(urldecode($_GET['register_error']));
+}
+
+$login_error = isset($_GET['error']) ? "Identifiants incorrects ou compte inexistant." : '';
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -43,10 +59,17 @@
         <!-- Panneau Connexion -->
         <div id="panel-login" class="panel active">
 
-            <?php if(isset($_GET['error'])): ?>
+            <?php if($success_msg): ?>
+            <div class="success-box">
+                <i class="ti ti-circle-check"></i>
+                <?= $success_msg ?>
+            </div>
+            <?php endif; ?>
+
+            <?php if($login_error): ?>
             <div class="error-box">
                 <i class="ti ti-alert-circle"></i>
-                Identifiants incorrects ou compte inexistant.
+                <?= $login_error ?>
             </div>
             <?php endif; ?>
 
@@ -95,6 +118,13 @@
 
         <!-- Panneau Créer un compte -->
         <div id="panel-register" class="panel">
+
+            <?php if($register_error): ?>
+            <div class="error-box">
+                <i class="ti ti-alert-circle"></i>
+                <?= $register_error ?>
+            </div>
+            <?php endif; ?>
 
             <form action="register.php" method="POST">
 
@@ -155,6 +185,15 @@
 </div>
 
 <script>
+// Ouvrir automatiquement le bon panneau selon l'URL
+document.addEventListener('DOMContentLoaded', function() {
+    <?php if($register_error): ?>
+    showPanel('register');
+    <?php elseif($success_msg): ?>
+    showPanel('login');
+    <?php endif; ?>
+});
+
 function showPanel(panel) {
     document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
     document.getElementById('panel-' + panel).classList.add('active');
