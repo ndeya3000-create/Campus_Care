@@ -7,7 +7,7 @@
     <title>CampusCare</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -224,7 +224,7 @@
 
     <!-- JS -->
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 
     <!-- Bootstrap JS -->
 
