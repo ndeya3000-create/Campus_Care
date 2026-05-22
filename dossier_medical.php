@@ -72,7 +72,7 @@ ON traitements.patient_id = patients.id
 
 <!-- HISTORIQUE -->
 
-<h2>Historique des Consultations</h2>
+<h2>Historique des Consultations et prescriptions</h2>
 
 <table id="table">
 
