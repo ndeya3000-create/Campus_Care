@@ -47,7 +47,7 @@ body{
     background:
     linear-gradient(rgba(0,0,0,0.6),
     rgba(0,0,0,0.6)),
-    url("images/medical.png");
+    url("medical.png");
 
     background-size:cover;
     background-position:center;
