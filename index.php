@@ -70,34 +70,44 @@
 
     </nav>
 
-    <!-- HERO SECTION -->
+  <!-- HERO SECTION -->
 
-    <section class="hero">
+<section class="hero">
 
-        <div class="hero-content">
+    <div class="hero-slides">
+        <img src="medical.png" alt="slide 1">
+        <img src="medical2.png" alt="slide 2">
+        <img src="medical3.png" alt="slide 3">
+    </div>
 
-            <h1>Bienvenue sur CampusCare</h1>
+    <div class="hero-overlay"></div>
 
-            <p>
-                Système intelligent de gestion d’un centre
-                de santé universitaire
-            </p>
+    <div class="hero-content">
 
-            <div class="buttons">
+        <h1>Bienvenue sur CampusCare</h1>
 
-                <button class="btn-main">
-                    <i class="fa-solid fa-calendar-check"></i>
-                    Rendez-vous
-                </button>
+        <p>
+            Système intelligent de gestion d'un centre
+            de santé universitaire
+        </p>
 
-                <button class="btn-second">
-                    <i class="fa-solid fa-right-to-bracket"></i>
-                    Connexion
-                </button>
+        <div class="buttons">
 
-            </div>
+            <button class="btn-main">
+                <i class="fa-solid fa-calendar-check"></i>
+                Rendez-vous
+            </button>
+
+            <button class="btn-second">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Connexion
+            </button>
 
         </div>
+
+    </div>
+
+</section>
 
     </section>
 
