@@ -1,5 +1,5 @@
 <?php
-require_once '../includes/db.php';
+require_once 'database.php';
 $page_title = 'Patients';
 require_once '../includes/header.php';
 
