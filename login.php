@@ -12,7 +12,14 @@ if (isset($_GET['register_error'])) {
     $register_error = htmlspecialchars(urldecode($_GET['register_error']));
 }
 
-$login_error = isset($_GET['error']) ? "Identifiants incorrects ou compte inexistant." : '';
+$login_error = '';
+if (isset($_GET['error'])) {
+    if ($_GET['error'] === 'disabled') {
+        $login_error = "Votre compte a été désactivé. Contactez l'administration.";
+    } else {
+        $login_error = "Identifiants incorrects ou compte inexistant.";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -73,7 +80,7 @@ $login_error = isset($_GET['error']) ? "Identifiants incorrects ou compte inexis
             </div>
             <?php endif; ?>
 
-            <form action="login.php" method="POST">
+            <form action="login_process.php" method="POST">
 
                 <div class="field">
                     <label>Nom d'utilisateur</label>

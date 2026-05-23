@@ -98,7 +98,7 @@
                 Rendez-vous
             </button>
 
-            <button class="btn-second">
+            <button class="btn-second" onclick="window.location.href='../campus_care/login.php'">
                 <i class="fa-solid fa-right-to-bracket"></i>
                 Connexion
             </button>
